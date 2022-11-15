@@ -1,0 +1,10 @@
+{   
+    "json_file": "./questions.json",  #can be null
+    "images_download_directory": "awesome dir name", #can be null
+    "first_question": 1,			  #can be null
+    "last_question": 1,
+    "search_params_base": "some topic question number %d",
+    "url_regex_base": "https?://www.secretwebpage.com/view/\\d+-some-topic-question-number-%d/",
+    "max_skipped": -1,	              #can be null
+    "error_log_path": null            #can be null
+}
