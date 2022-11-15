@@ -14,7 +14,7 @@ function Test-IsNotNull {
     $null -ne $p
 }
 
-$params = Get-Content -Raw -Encoding UTF8 -Path .\run-params.json | ConvertFrom-Json
+$params = Get-Content -Raw -Encoding UTF8 -Path $params_file | ConvertFrom-Json
 $first_question = if (Test-IsNotNull $params.first_question) { $params.first_question } else {1}
 $error_log_path = if (Test-IsNotNull $params.error_log_path) { $params.error_log_path } else {'./error_log.txt'}
 $max_skipped_urls = if (Test-IsNotNull $params.max_skipped) { $params.max_skipped } else {-1}

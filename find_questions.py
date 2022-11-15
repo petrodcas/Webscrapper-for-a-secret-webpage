@@ -114,10 +114,12 @@ def close_cookie_banner_if_present(driver):
     try:
         # close cookies banner if present
         close_button = driver.find_element(By.ID, _CANCEL_COOKIES_BUTTON_ID)
+        print('[Info] Cookies detected')
         if close_button is not None:
             close_button.click()
     except:
-        print('[Info] No cookies banner detected')
+        pass
+        #print('[Info] No cookies banner detected')
 
 
 def remove_answer_prefix(answer):
